@@ -1,0 +1,21 @@
+
+
+<div class="container">
+    <h2>Liste des Utilisateurs</h2>
+    <div class="search-box">
+      <input 
+        type="text" 
+        [(ngModel)]="searchText" 
+        placeholder="Search users..."
+        class="search-input"
+      >
+    </div>
+    <div class="user-list">
+      <div *ngFor="let user of (users | filter:searchText)" class="user-card">
+        <h3>{{ user.name }}</h3>
+        <p>Email: {{ user.email }}</p>
+        <p>Phone: {{ user.phone }}</p>
+        <p>Website: {{ user.website }}</p>
+      </div>
+    </div>
+  </div>
