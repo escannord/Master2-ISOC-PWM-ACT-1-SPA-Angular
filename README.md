@@ -1,59 +1,81 @@
-# AppliUsers
+### Prérequis
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+Avant de commencer, assure-toi d'avoir les éléments suivants installés sur ta machine :
 
-## Development server
+- **Node.js** (version 20 ou supérieure)
+- **npm** (qui vient avec Node.js)
+- **Angular CLI** : tu peux l'installer globalement en utilisant la commande suivante :
 
-To start a local development server, run:
+  ```bash
+  npm install -g @angular/cli
+  ```
+- Éventuellement [NVM](https://github.com/coreybutler/nvm-windows/releases) (node version manager) si vous vous retrouvez avec plusieurs versions de nodeJS installées
 
-```bash
-ng serve
-```
+### AppliUsers
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Ce projet a été généré à l'aide de la version 19.2.4 d'Angular CLI.
 
-## Code scaffolding
+### Installation des dépendances
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Avant de pouvoir utiliser l'application, tu dois installer les dépendances Node nécessaires. Une fois que tu as cloné le dépôt, exécute la commande suivante dans le répertoire du projet pour installer toutes les dépendances, tout en ignorant les dossiers comme `node_modules` et `.angular` :
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
+### Construction du projet
 
-To build the project run:
+Après avoir installé les dépendances, tu dois construire ton projet pour générer les artefacts de la production. Utilise cette commande :
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Cela compilera ton projet et stockera les artefacts de la construction dans le répertoire `dist/`. La construction de production optimise automatiquement l'application pour la performance et la vitesse.
 
-## Running unit tests
+### Serveur de développement
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Une fois la construction terminée, tu peux démarrer un serveur de développement local pour voir ton application en action. Exécute la commande suivante :
+
+```bash
+ng serve
+```
+
+Une fois le serveur démarré, ouvre ton navigateur et accède à [http://localhost:4200/](http://localhost:4200/). L'application se rechargera automatiquement chaque fois que tu modifieras un fichier source.
+
+### Création de code (Scaffolding)
+
+Angular CLI comprend des outils puissants pour générer du code. Pour créer un nouveau composant, exécute la commande suivante :
+
+```bash
+ng generate component nom-du-composant
+```
+
+Pour une liste complète des schématiques disponibles (comme des composants, directives ou pipes), utilise cette commande :
+
+```bash
+ng generate --help
+```
+
+### Exécution des tests unitaires
+
+Pour exécuter les tests unitaires avec le runner de tests Karma, utilise la commande suivante :
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+### Exécution des tests de bout en bout (end-to-end)
 
-For end-to-end (e2e) testing, run:
+Pour effectuer des tests de bout en bout (e2e), utilise cette commande :
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Angular CLI ne fournit pas de framework de tests de bout en bout par défaut. Tu peux choisir celui qui correspond à tes besoins.
 
-## Additional Resources
+### Ressources supplémentaires
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Pour plus d'informations sur l'utilisation de l'Angular CLI, y compris des références détaillées des commandes, consulte la page de l'**Aperçu d'Angular CLI et la Référence des commandes**.
+
