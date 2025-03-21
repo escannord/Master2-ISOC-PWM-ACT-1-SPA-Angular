@@ -14,16 +14,15 @@ import { FilterPipe } from "../filter.pipe";
 })
 
 export class UserListComponent implements OnInit  {
-  users: any[] = [];
-  searchText = '';
-  constructor(private userService?: UserService) {}
-  ngOnInit() {
-    this.userService?.getUsers().subscribe(data => this.users = data);
-    this.users.push({
-      name: 'Arnold NG',
+  users: any[] = [{
+      name: 'NGUECHOUNG Arnold',
       phone: '1234567890',
       email: 'Q2l3V@example.com',
       website:' itc innovation.com',
-    })
+    }];
+  searchText = '';
+  constructor(private userService?: UserService) {}
+  ngOnInit() {
+    this.userService?.getUsers().subscribe(data => this.users = this.users.concat(data));
   }
 }
